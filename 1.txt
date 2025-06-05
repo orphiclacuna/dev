@@ -1,0 +1,8 @@
+MAVEN AND GRADLE INSTALLATION
+Download bin zip file
+Extract
+Move to Program Files
+Copy bin folder path
+Paste in PATH in environment variables
+Maven: mvn -v
+Gradle: gradle -v

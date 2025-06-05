@@ -1,0 +1,6 @@
+JENKINS INSTALLATION
+Download Jenkins
+Download jdk-17/21/23 and add bin path to the PATH in system variables
+Setup Jenkins
+Unlock Jenkins (Go to file explorer -> View button -> Show -> Hidden Files. Paste C:\Program Files\Jenkins\secrets\initialAdminPassword in address bar. Password will open in notepad file, copy it and paste it in Jenkins)
+Skip signin

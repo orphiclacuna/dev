@@ -1,0 +1,12 @@
+CREATING ACCOUNT IN AZURE DEVOPS AND CREATING A PROJECT
+Create account:
+Search for Azure Devops and create account with your personal email 
+Once logged in, on Azure Homepage, search and select Azure Organizations -> My Azure Organizations
+Choose India and give a unique organization name and click Create Organization
+
+
+
+Create Project:
+On Dashboard, click New Project
+Give it an name and select Public/Private
+Click Create

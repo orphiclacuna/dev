@@ -1,0 +1,51 @@
+SETUP CI PIPELINE IN JENKINS INTEGRATED WITH MAVEN OR GRADLE
+Install Plugins:
+Dashboard -> Manage Jenkins -> Manage Plugins
+Maven Integration Plugin
+Gradle Plugin
+JUnit Plugin
+
+
+
+Setup Maven in Jenkins:
+Dashboard -> Manage Jenkins -> Global Tool Configuration
+Click Add Maven
+Name: Maven-10
+Disable Install Automatically
+Provide installed path (C:\Program Files\apache-maven-3.9.9-bin\apache-maven-3.9.9)
+
+
+
+Create Jenkins Job:
+Name: maventest1
+New Item -> Freestyle Project
+Source Code Management: Git
+Build Steps: Invoke top-level Maven targets
+Goal: mvn clean install
+Advanced -> POM: (Provide Maven project's pom.xml path, program2/4)
+Save
+
+
+
+Pipeline the project:
+Click on maventest1 on Dashboard/Homepage
+Click on Build Now
+Under builds, click on the latest build (#1)
+Click on Console output to see the output
+
+
+
+(If there's errors like mvn is not recognized command, JAVA_HOME is not set or MAVEN_HOME is not set:
+Dashboard -> Manage Jenkins -> System -> Enable environment variables
+Under list of variables add three variables:
+
+Name: JAVA_HOME
+Value: C:\Program Files\Java\jdk-21 (path to your jdk)
+
+Name: MAVEN_HOME
+Value: C:\Program Files\apache-maven-3.9.9-bin\apache-maven-3.9.9 (path to your maven)
+
+Name: PATH
+Value: C:\Program Files\apache-maven-3.9.9-bin\apache-maven-3.9.9\bin;C:\Program Files\C:\Program Files\Java\jdk-21\bin (paths to bin folder of jdk and maven, separated by semicolon)
+
+Apply and Save)
