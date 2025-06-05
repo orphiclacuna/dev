@@ -2,7 +2,7 @@ ANSIBLE IN UBUNTU
 sudo apt update
 sudo apt install ansible -y
 ansible --version
-sudo mkdir -=/etc/ansible
+sudo mkdir -p/etc/ansible
 sudo nano /etc/ansible/hosts
 
 [local]
