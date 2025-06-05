@@ -19,4 +19,4 @@ sudo nano test.yml
   debug:
    msg: "Tasks runs locally"
 
-ansible -playbook -i/rtc/ansible/hosts test.yml
+ansible -playbook -i/etc/ansible/hosts test.yml
