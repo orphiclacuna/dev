@@ -1,0 +1,22 @@
+ANSIBLE IN UBUNTU
+sudo apt update
+sudo apt install ansible -y
+ansible --version
+sudo mkdir -=/etc/ansible
+sudo nano /etc/ansible/hosts
+
+[local]
+localhost ansible_connection = local
+
+ansible -inventory --list -y
+sudo ansible all -m ping
+sudo nano test.yml
+
+-name: Run local task
+ hosts: local
+ tasks:
+  name: Print a message
+  debug:
+   msg: "Tasks runs locally"
+
+ansible -playbook -i/rtc/ansible/hosts test.yml
